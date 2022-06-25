@@ -1,0 +1,107 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { SearchTerm } from "./searchTerm/SearchTerm";
+import { YelpSearch } from "./yelpSearch/YelpSearch";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import foodImg from "../asset/foodImg.jpeg";
+import { Route, Routes } from "react-router-dom";
+import home from "../asset/home.svg";
+import favorite from "../asset/favorite.png";
+import github from "../asset/github.png";
+import linkedin from "../asset/linkedin.png";
+import mail from "../asset/email.png";
+
+export const TopBar = () => {
+  return (
+    <Box
+      sx={{
+        height: 500,
+        backgroundImage: `url(${foodImg})`,
+        backgroundSize: "cover",
+        alignItems: "center",
+      }}
+    >
+      <AppBar position="static" style={{ background: "transparent" }}>
+        <Toolbar>
+          <Typography
+            variant="h5"
+            noWrap
+            color="#fce803"
+            sx={{
+              mr: 5,
+              display: { xs: "none", sm: "block", fontFamily: "Pacifico" },
+            }}
+          >
+           MyFavSpot
+          </Typography>
+          <Button
+            sx={{ mr: 2 }}
+            component={Link}
+            to="/my-fav-spot"
+            variant="contained"
+          >
+            <img src={home} alt="home" style={{ width: 20, marginRight: 3 }} />{" "}
+            Home
+          </Button>
+          <Button
+            sx={{ mr: 2 }}
+            component={Link}
+            to="/my-fav-spot/favorite/"
+            variant="contained"
+          >
+            <img
+              src={favorite}
+              alt="favorite"
+              style={{ width: 20, marginRight: 3 }}
+            />{" "}
+            Favorite
+          </Button>
+          <Box style={{ flexGrow: 10 }}> </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <a
+              id="github"
+              href="https://github.com/1542shin/my-fav-spot"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                style={{ width: 32, margin: 5 }}
+                className="w-10 mr-3 hover:scale-110"
+                src={github}
+                alt="github icon"
+              />
+            </a>{" "}
+            <a
+              id="linkedin"
+              href="https://www.linkedin.com/in/aahan-shin-300722235"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                style={{ width: 32, margin: 3 }}
+                className="w-10 mr-2 hover:scale-110"
+                src={linkedin}
+                alt="linkedIn icon"
+              />
+            </a>{" "}
+            <a id="mail" href="mailto:1542shin@gmail.com">
+              <img
+                style={{ width: 32, margin: 5 }}
+                className="w-10 hover:scale-110"
+                src={mail}
+                alt="mail icon"
+              />
+            </a>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Routes>
+        <Route path="/my-fav-spot" element={<YelpSearch />} />
+        <Route
+          path="/my-fav-spot/favorite"
+          element={<SearchTerm />}
+        />
+      </Routes>
+    </Box>
+  );
+};
