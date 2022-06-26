@@ -37,7 +37,7 @@ export const TopBar = () => {
           <Button
             sx={{ mr: 2 }}
             component={Link}
-            to="/my-fav-spot"
+            to="/my-fav-spot/"
             variant="contained"
           >
             <img src={home} alt="home" style={{ width: 20, marginRight: 3 }} />{" "}

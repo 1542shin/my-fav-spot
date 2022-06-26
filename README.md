@@ -1,14 +1,14 @@
 # MyFavSpot
 
-MyFavSpot is web front-end project.
-It searches restaurants and shows the lists.
-You can also save restaurants as your favorite one. 
+MyFavSpot is web front-end project with React/Redux library.
+It searches restaurants and allows you to add restaurants to your favorites list.
+
 The search feature uses Yelp API.
 
 
 ## Requirement
 
-Please request temporary access for CORS at the website
+The project requires access from cors-anywhere server.
 
 [CORS Anywhere](https://cors-anywhere.herokuapp.com/corsdemo) ([https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo))
 
@@ -18,6 +18,7 @@ Please request temporary access for CORS at the website
 
 ![Alt text](/Demo-screenshot.png )
 ![Alt text](/Demo-screenshot2.png )
+
 
 ## Technology
 HTML, CSS, Javascript, React, Redux, Material UI
@@ -91,7 +92,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you have any feedback, please reach out to us at 1542shin@gmail.com
 
-
-## Related
-
-Here are some related projects
