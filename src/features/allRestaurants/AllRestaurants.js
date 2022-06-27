@@ -8,11 +8,8 @@ export const AllRestaurants = () => {
   const yelpSearch = useSelector(selectYelpSearch);
 
   const dispatch = useDispatch();
-  useEffect(() => dispatch(loadData()), []);
   return (
-    <Box sx={{ display: 'grid',
-    gridTemplateColumns: { md: '1fr 1fr' },
-    }}>
+    <Box sx={{ display: "grid", gridTemplateColumns: { md: "1fr 1fr" } }}>
       {yelpSearch.map((restaurant) => (
         <RestaurantForm restaurant={restaurant} key={restaurant.id} />
       ))}

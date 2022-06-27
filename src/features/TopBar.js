@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchTerm } from "./searchTerm/SearchTerm";
 import { YelpSearch } from "./yelpSearch/YelpSearch";
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Paper, Toolbar, Typography } from "@mui/material";
 import foodImg from "../asset/foodImg.jpeg";
 import { Route, Routes } from "react-router-dom";
 import home from "../asset/home.svg";
@@ -10,8 +10,11 @@ import favorite from "../asset/favorite.png";
 import github from "../asset/github.png";
 import linkedin from "../asset/linkedin.png";
 import mail from "../asset/email.png";
+import CloseIcon from '@mui/icons-material/Close';
+import { IconButton } from '@mui/material';
 
 export const TopBar = () => {
+  const [close, setClose] = useState(false);
   return (
     <Box
       sx={{
@@ -32,7 +35,7 @@ export const TopBar = () => {
               display: { xs: "none", sm: "block", fontFamily: "Pacifico" },
             }}
           >
-           MyFavSpot
+            MyFavSpot
           </Typography>
           <Button
             sx={{ mr: 2 }}
@@ -95,12 +98,23 @@ export const TopBar = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      {close ? null : (
+        <Paper sx={{display:'flex', alignItems:'center', position:'fixed', backgroundColor: "white", margin:2, padding:1, zIndex:2}}>
+          <IconButton aria-label="close" onClick={() => setClose("true") }>
+  <CloseIcon />
+</IconButton>
+          <Typography>
+
+            This project needs access to CORS-anywhere Server{' '}
+           
+            <a  href='https://cors-anywhere.herokuapp.com' target='_blank' rel='noreferrer'>(https://cors-anywhere.herokuapp.com)</a>
+          </Typography>
+        </Paper>
+      )}
+
       <Routes>
         <Route path="/my-fav-spot" element={<YelpSearch />} />
-        <Route
-          path="/my-fav-spot/favorite"
-          element={<SearchTerm />}
-        />
+        <Route path="/my-fav-spot/favorite" element={<SearchTerm />} />
       </Routes>
     </Box>
   );
