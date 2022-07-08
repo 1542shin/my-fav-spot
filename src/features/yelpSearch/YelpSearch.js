@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loadData } from "./yelpSearchSlice";
 import { Button, TextField, Box, MenuItem, Grid } from "@mui/material";
-import search from "../../asset/search.svg"
+import search from "../../asset/search.svg";
 
 export const YelpSearch = () => {
   const dispatch = useDispatch();
-  const [term, setTerm] = useState("Korean");
+  const [term, setTerm] = useState("Korean Restaurant");
   const [location, setLocation] = useState("Austin, TX");
   const [sortBy, setSortBy] = useState("best_match");
   let keywords = {
@@ -125,8 +125,11 @@ export const YelpSearch = () => {
             variant="contained"
             onClick={handleSubmit}
           >
-                       <img src={search} alt='search' style={{ width: 20, marginRight: 3 }}/> 
-
+            <img
+              src={search}
+              alt="search"
+              style={{ width: 20, marginRight: 3 }}
+            />
             Search!
           </Button>
         </Grid>

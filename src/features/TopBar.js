@@ -43,7 +43,7 @@ export const TopBar = () => {
             to="/my-fav-spot/"
             variant="contained"
           >
-            <img src={home} alt="home" style={{ width: 20, marginRight: 3 }} />{" "}
+            <img src={home} alt="home" style={{ width: 20, marginRight: 3 }} />
             Home
           </Button>
           <Button
@@ -56,10 +56,10 @@ export const TopBar = () => {
               src={favorite}
               alt="favorite"
               style={{ width: 20, marginRight: 3 }}
-            />{" "}
+            />
             Favorite
           </Button>
-          <Box style={{ flexGrow: 10 }}> </Box>
+          <Box style={{ flexGrow: 10 }}/>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <a
               id="github"

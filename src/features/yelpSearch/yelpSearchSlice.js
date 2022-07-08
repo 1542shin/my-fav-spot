@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { apiKey } from "./apiKey";
+import { apiKey } from "../../apiKey";
 
 export const loadData = createAsyncThunk(
   "yelpSearch/loadData",
@@ -7,7 +7,6 @@ export const loadData = createAsyncThunk(
     try {
       const response = await yelpSearchAPI(keywords);
       const jsonResponse = await response.json();
-      //console.log(jsonResponse.businesses);
       return jsonResponse.businesses.map((business) => ({
         id: business.id,
         imageSrc: business.image_url,
