@@ -4,8 +4,8 @@ const favoriteRestaurantsSlice=createSlice({
     name: 'favoriteRestaurants',
     initialState: [],
     reducers:{
-        addRestaurant:(state, action)=>{state=state.push(action.payload)},
-        removeRestaurant:(state,action)=>state=state.filter(restaurant=>restaurant.id!==action.payload.id)
+        addRestaurant:(state, action)=>{state.push(action.payload)},
+        removeRestaurant:(state,action)=>state.filter(restaurant=>restaurant.id!==action.payload.id)
     } 
 })
 

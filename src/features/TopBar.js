@@ -15,6 +15,7 @@ import { IconButton } from '@mui/material';
 
 export const TopBar = () => {
   const [close, setClose] = useState(false);
+  
   return (
     <Box
       sx={{
@@ -76,7 +77,7 @@ export const TopBar = () => {
             </a>{" "}
             <a
               id="linkedin"
-              href="https://www.linkedin.com/in/aahan-shin-300722235"
+              href="https://www.linkedin.com/in/%E2%9D%84%EF%B8%8Faahan-s-198950246"
               target="_blank"
               rel="noreferrer"
             >
@@ -87,7 +88,7 @@ export const TopBar = () => {
                 alt="linkedIn icon"
               />
             </a>{" "}
-            <a id="mail" href="mailto:1542shin@gmail.com">
+            <a id="mail" href="mailto:1142shin@gmail.com">
               <img
                 style={{ width: 32, margin: 5 }}
                 className="w-10 hover:scale-110"
