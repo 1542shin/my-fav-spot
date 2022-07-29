@@ -88,7 +88,7 @@ export const TopBar = () => {
                 alt="linkedIn icon"
               />
             </a>{" "}
-            <a id="mail" href="mailto:1142shin@gmail.com">
+            <a id="mail" href="mailto:1542shin@gmail.com">
               <img
                 style={{ width: 32, margin: 5 }}
                 className="w-10 hover:scale-110"
